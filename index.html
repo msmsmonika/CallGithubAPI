@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>TopGit</title>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+   <style>
+   body
+   {
+    background: #ececec;
+   }
+
+body.loader
+{
+    overflow: hidden;
+}
+body.loader .modalLoad
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    background: url('http://i.imgur.com/72cTGB5.gif') no-repeat 50% 50%;
+}
+.input-field label.active {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-103%);
+    transform: translateY(-103%);
+}
+.brand-logo
+{
+    padding-left: 2% !important;
+}
+.brand-logo>span
+{
+    padding-left: 4%;
+}
+.card-panel>a {
+    width: 100%;
+    display: block;
+    color: #ee6e73;
+    font-size: 1.2em;
+}
+span.descText {
+    width: 100%;
+    display: block;
+    font-size: 0.9em;
+    color: #7b7b7b;
+}
+span.langText {
+    /* width: 50%; */
+    float: left;
+    padding: 0 17px 0 0;
+    font-size: 1em;
+}
+span.langVal {
+    color: #1683e6;
+    float: left;
+    /* padding-top: 4px; */
+    /* padding-bottom: 11px; */
+}
+   </style>
+    </head>
+    <body>
+    
+    <div class="container">
+     <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img class="logoImg" alt="Brand" src="http://i.imgur.com/iBaNg13.png"><span>TopGit</span></a>
+    </div>
+  </nav>
+    <div class="row">
+      <div class="col s12 topSearchBar"> 
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+         <h5 id="searchCount"></h5>
+          <form  method="get" >
+        <div class="input-field col s8">
+          <input id="search" type="search" list="languages" required >
+          <label for="search"><i class="material-icons">search</i>&nbsp;Search(By Language)</label>
+          <i class="material-icons">close</i>
+        </div>
+        <div class="input-field col s2">
+          <input type="button" class="waves-effect waves-light btn" value="Search" onclick="DoSearch();"/>
+        </div>
+      </form>
+        </div>
+      </div>
+  </div>
+      
+      </div>
+      <div class="col s12 l4 push-l8">
+ <form action="#">
+ <div class="starHead">
+ <span><i class="material-icons" style="color: #ee6e73">star</i></span>
+ <span>Stars</span>
+ </div>
+ 
+    <p class="range-field">
+    (0-1000)
+      <input type="range" id="starsRange" min="0" max="1000" value="0" />
+<span class="new badge" data-badge-caption="stars and more" id="selectedStars">0</span>
+    </p>
+  </form>
+      </div>
+      <div class="col s12 l8 pull-l4" >
+     
+<ul class="pagination">
+  </ul>
+      <div id="resultList"></div>
+  </div>
+      </div>
+      </div>
+      </div>
+      <datalist id="languages">
+  <option value="PHP" />
+  <option value="C++" />
+  <option value="Java" />
+  <option value="Ruby" />
+  <option value="Python" />
+  <option value="Go" />
+  <option value="Perl" />
+  <option value="Erlang" />
+   <option value="html" />
+    <option value="C#" />
+     <option value="JavaScript" />
+      <option value="jQuery" />
+       <option value="C" />
+        <option value="Shell" />
+         <option value="CSS" />
+          <option value="Coffe Script" />
+           <option value="Go" />
+</datalist>
+<div class="modalLoad">
+    
+</div>
+ <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="script.js"></script>
+    </body>
+</html>
+

@@ -1,0 +1,75 @@
+  body
+   {
+    background: #ececec;
+   }
+
+body.loader
+{
+    overflow: hidden;
+}
+h5
+{
+	font-size:1.1em;
+}
+#searchCount
+{
+	font-size:1em;
+}
+ul
+{
+	margin:0;
+}
+body.loader .modalLoad
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    background: url('http://i.imgur.com/72cTGB5.gif') no-repeat 50% 50%;
+}
+.input-field label.active {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-103%);
+    transform: translateY(-103%);
+}
+.brand-logo
+{
+    padding-left: 2% !important;
+}
+.brand-logo>span
+{
+    padding-left: 4%;
+}
+.card-content>a {
+    width: 100%;
+    display: block;
+    color: #26a69a;
+    font-size: 1.2em;
+}
+span.descText {
+    width: 100%;
+    display: block;
+    font-size: 0.9em;
+    color: #7b7b7b;
+}
+span.langText {
+    /* width: 50%; */
+    float: left;
+    padding: 0 17px 0 0;
+    font-size: 1em;
+}
+span.langVal {
+    color: #1683e6;
+    float: left;
+    /* padding-top: 4px; */
+    /* padding-bottom: 11px; */
+}
+.starHead{
+	display:flex;
+	align-items:center;
+	padding:5px;
+	border:1px solid #ee6e73;
+}
